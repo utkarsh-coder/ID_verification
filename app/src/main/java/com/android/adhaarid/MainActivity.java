@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        MicroblinkSDK.setLicenseKey("sRwAAAAUY29tLmFuZHJvaWQuYWRoYWFyaWShtWawDyS72rVoGAbgPA77o/47jKfAcT6E32QyIM8oNbC1nVAB4nxiCH4UoxIpLe/W0hzIXtwKOz2i4wEf8uNa435Id57KDADq3zhmACvvvX2ErgMPeeSJzj7e4TgKIoIhoSHKXoVKcm5KUCKrqmC/CHGRRGc1R/CU+IJoaMns6zNnNZwGk3HKTQAmTB4Pz8nypLKs9zgqkn393+NDrlBnT+8E/Fq+O6kp",this);
+        MicroblinkSDK.setLicenseKey("**My secret key**",this);
 
         ActivityResultLauncher<Void> resultLauncher = registerForActivityResult(
                 new TwoSideDocumentScan(),
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
         ByteBuffer sourceImageBytes = null;
         ByteBuffer targetImageBytes = null;
         Float similarityThreshold = 70F;
-        AmazonRekognition rekognitionClient = new AmazonRekognitionClient(new BasicAWSCredentials("AKIASP5V3K76YRO5M5EI", "SbzL/ByAT2MRUFk1ffuDyqWFLGEMHj68WLBuqruP"));
+        AmazonRekognition rekognitionClient = new AmazonRekognitionClient(new BasicAWSCredentials("**key**", "**secret key**"));
 
         try {
             InputStream inputStream1 = Files.newInputStream(new File("/data/user/0/com.android.adhaarid/cache/scanimage1.jpeg").toPath());
